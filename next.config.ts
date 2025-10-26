@@ -5,10 +5,15 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
-        port: "",      // usually empty
-        pathname: "/**", // allow all paths under this domain
+        port: "",
+        pathname: "/**",
       },
-      // add more domains if needed
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };

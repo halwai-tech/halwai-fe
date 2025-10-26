@@ -1,13 +1,15 @@
 "use client";
+
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import AuthMenu from "./AuthMenu";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // replaces useLocation()
+  const pathname = usePathname();
 
   const links = [
     { to: "/", label: "Home" },
@@ -23,9 +25,10 @@ const Navigation = () => {
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-md shadow-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <Image
-              src="/assets/logo.png"
+              src="/assets/halwai-logo.png"
               alt="Halwaiwala.In"
               className="h-12 w-auto transition-transform group-hover:scale-105"
               width={48}
@@ -48,6 +51,10 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            
+              {/* Auth Section */}
+            <AuthMenu />
+
             <a
               href="https://wa.me/919811820494"
               target="_blank"
@@ -56,6 +63,8 @@ const Navigation = () => {
             >
               WhatsApp Us
             </a>
+
+          
           </div>
 
           {/* Mobile Menu Button */}
@@ -76,14 +85,13 @@ const Navigation = () => {
                 href={link.to}
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
-                  isActive(link.to)
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:bg-muted"
+                  isActive(link.to) ? "bg-primary text-primary-foreground" : "hover:bg-muted"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
+
             <a
               href="https://wa.me/919811820494"
               target="_blank"
@@ -93,6 +101,9 @@ const Navigation = () => {
             >
               WhatsApp Us
             </a>
+
+            {/* Mobile Auth */}
+            <AuthMenu mobile />
           </div>
         )}
       </div>

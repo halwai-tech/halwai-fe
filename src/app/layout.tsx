@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./App.css";
-
+import CustomSessionProvider from "@/components/CustomSessionProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,7 +28,9 @@ export default function RootLayout({
       <body
         className={`bg-background text-foreground ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+       <CustomSessionProvider>
         {children}
+       </CustomSessionProvider>
       </body>
     </html>
   );

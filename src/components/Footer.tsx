@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Image
-              src="/assets/logo.png"
+              src="/assets/halwai-logo.png"
               alt="Halwaiwala.In"
               width={64} // equivalent to h-16
               height={64} // maintain aspect ratio if needed
@@ -20,8 +20,9 @@ const Footer = () => {
             />
 
             <p className="text-muted-foreground text-sm">
-              Connecting you with trusted local halwais for unforgettable
-              celebrations.
+              Our platform connects you with verified, experienced halwais
+              across Delhi NCR who specialize in creating authentic traditional
+              sweets and providing comprehensive catering services.
             </p>
           </div>
 

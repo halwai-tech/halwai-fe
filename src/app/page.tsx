@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { ArrowRight, Star, Users, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +14,8 @@ import { blogPosts } from "@/data/blogs";
 const Home = () => {
   const featuredHalwais = halwais.slice(0, 3);
   const recentBlogs = blogPosts.slice(0, 3);
+
+  console.log("Client Id:",process.env.GOOGLE_CLIENT_ID);
 
   return (
     <div className="min-h-screen bg-background">
