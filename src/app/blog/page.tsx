@@ -3,10 +3,10 @@
 import { useState } from "react";
 import Link from "next/link"; // <-- Next.js Link
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Card, CardContent } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { blogPosts } from "@/data/blogs";
 

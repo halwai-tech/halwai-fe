@@ -5,11 +5,9 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import { LogOut } from "lucide-react";
 
-interface AuthMenuProps {
-  mobile?: boolean; // if true, render mobile-friendly layout
-}
 
-const AuthMenu: React.FC<AuthMenuProps> = ({ mobile = false }) => {
+
+const AuthMenu= ({ mobile = false }) => {
   const { data: session, status } = useSession();
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
