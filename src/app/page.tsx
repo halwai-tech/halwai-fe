@@ -57,7 +57,7 @@ const Home = () => {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/919811820494"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeATpkJflVwzUkF5LKhDGlu87Nz7JBkzheor8GNwDmcdHrbYQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAad7xqXiJKMgeRLACvNBULHsUG_WEiy5y17CIkNtPUrwJlIqpgX87WgJfVZ7Rw_aem_nC4Arssa-K3psxE-5aKEIA"
                 target="_blank"
                 rel="noopener noreferrer"
               >
